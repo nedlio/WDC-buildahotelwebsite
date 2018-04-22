@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Account Management</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="Acc-stylesheet.css" type="text/css" />
+</head>
+<body>
+
+<h1>Account Management</h1>
+<hr>
+<div>
+<a href="Home.html"><button class="home">HOME</button></div></a>
+<h2>Booking Review</h2>
+<div id="review" >Write your review
+<textarea rows="10" cols="50"></textarea>
+<button class="but">Submit Review</button>
+</div>
+<h2>Update Account</h2>
+   <div class="container" id="review">
+		
+		 <label for="email"><b>Change Email</b></label>
+      <input type="text" placeholder="john@example.com" name="email" required>
+		<br>
+		
+		 <label for="card"><b>Credit Card No.</b></label>
+      <input type="text" placeholder="Card No." name="card" required>
+		<br>
+		
+		 <label for="uname"><b>Expiry</b></label>
+      <input type="text" placeholder="mm/yy" name="exp" required>
+		<br>
+		
+		 <label for="sec"><b>Card Security No.</b></label>
+      <input type="text" placeholder="CSC/CVV/CVC" name="sec" required>
+		<br>
+		
+      <label for="psw"><b>Change Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        <br>
+        
+         <label for="repsw"><b>Re-Enter Password</b></label>
+      <input type="password" placeholder="Re-Enter Password" name="repsw" required>
+        <br>
+
+<button type="submit" class="but">Submit</button>
+
+</div>
+<h2>Modify Booking</h2>
+<div id="change">Modify booking
+<br>
+
+
+                        <div class="search-item">
+                            <label class="search-lable">Check-in date:</label>
+                            <div class="search-value">
+                                <input type="date" />
+                            </div>
+                        </div>
+
+                        <div class="search-item">
+                            <label class="search-lable">Check-out date:</label>
+                            <div class="search-value">
+                                <input type="date" />
+                            </div>
+                        </div>
+
+                        <div class="search-item">
+                            <label class="search-lable">Guests:</label>
+                            <div class="search-value">
+                                <input type="number" value="1" placeholder="guests" />
+                            </div>
+                        </div>
+
+                        <div class="search-item">
+                            <label class="search-lable">Room no:</label>
+                            <div class="search-value">
+                                <select>
+                                    <option>room #1</option>
+                                    <option>room #1</option>
+                                    <option>room #1</option>
+                                    <option>room #1</option>
+                                    <option>room #1</option>
+                                </select>
+                            </div>
+                        </div>
+<button class="but">Confirm Changes</button>
+<br>
+<br>
+Delete Current Booking
+<br>
+<button class="but">Delete Booking</button>
+<br>
+<br>
+<br>
+</div>
+
+
+</body>
+</html>
