@@ -1,8 +1,11 @@
 <!DOCTYPE html>
-<html>
+
+<html lang="en">
+
 <head>
-	<title>Account Management</title>
-	<meta charset="UTF-8">
+	<meta charset='UTF-8'>
+	<title>AccountManagement</title>
+	
 	<link rel="stylesheet" href="Acc-stylesheet.css" type="text/css" />
 </head>
 <body>
@@ -10,37 +13,40 @@
 <h1>Account Management</h1>
 <hr>
 <div>
-<a href="Home.html"><button class="home">HOME</button></div></a>
+<form method="get" action="Home.html">
+    <button class ="home" type="submit">Home</button>
+</form>
+</div>
 <h2>Booking Review</h2>
 <div id="review" >Write your review
 <textarea rows="10" cols="50"></textarea>
 <button class="but">Submit Review</button>
 </div>
 <h2>Update Account</h2>
-   <div class="container" id="review">
+   <div class="container" id="rev">
 		
 		 <label for="email"><b>Change Email</b></label>
-      <input type="text" placeholder="john@example.com" name="email" required>
+      <input type="text" placeholder="john@example.com" name="email" id="email" required>
 		<br>
 		
 		 <label for="card"><b>Credit Card No.</b></label>
-      <input type="text" placeholder="Card No." name="card" required>
+      <input type="text" placeholder="Card No." name="card" id="card" required>
 		<br>
 		
-		 <label for="uname"><b>Expiry</b></label>
-      <input type="text" placeholder="mm/yy" name="exp" required>
+		 <label for="exp"><b>Expiry</b></label>
+      <input type="text" placeholder="mm/yy" name="exp" id="exp" required>
 		<br>
 		
 		 <label for="sec"><b>Card Security No.</b></label>
-      <input type="text" placeholder="CSC/CVV/CVC" name="sec" required>
+      <input type="text" placeholder="CSC/CVV/CVC" name="sec" id="sec" required>
 		<br>
 		
       <label for="psw"><b>Change Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
         <br>
         
          <label for="repsw"><b>Re-Enter Password</b></label>
-      <input type="password" placeholder="Re-Enter Password" name="repsw" required>
+      <input type="password" placeholder="Re-Enter Password" name="repsw" id="repsw" required>
         <br>
 
 <button type="submit" class="but">Submit</button>
@@ -54,14 +60,14 @@
                         <div class="search-item">
                             <label class="search-lable">Check-in date:</label>
                             <div class="search-value">
-                                <input type="date" />
+                                
                             </div>
                         </div>
 
                         <div class="search-item">
                             <label class="search-lable">Check-out date:</label>
                             <div class="search-value">
-                                <input type="date" />
+                                
                             </div>
                         </div>
 
