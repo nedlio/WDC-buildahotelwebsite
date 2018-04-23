@@ -1,9 +1,18 @@
 
+.home{
+	float: right;
+	padding: 16px;
+}
+
 .page {
     background-color: white;
     width: 90%;
     margin: auto;
     padding: 0px;
+}
+
+h1{
+    text-align: center;
 }
 
 .clearfix::after {
