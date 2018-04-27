@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>My Prac 5 Express Server</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="stylesheets/details.css" type="text/css" rel="stylesheet" />
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+        * element that contains the map. */
+        html {
+            height: 100%;
+        }
+
+        body {
+            /*text-align: center;*/
+            height: 100%;
+        }
+
+        #map {
+            width: 70%;
+            height: 70%;
+            text-align: center;
+            display: table;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        div {
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input class="home" type="button" onclick="window.location.href='/index.html'" value="HOME" />
+        <input class="home" type="button" onclick="window.location.href='/search.html'" value="Search Result" />
+    </div>
+    <h1>Jacksons Motor Inn</h1>
+    <div id="map"></div>
+    <!--<input type="button" onclick="addMarker()" value="Add Marker" />-->
+    <!--<input type="button" onclick="showLocation()" value="Kangaroo Island" />-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMnohsYMcp8bRVEhYGKN9Y41XY6-cbfnY&callback=initMap" async defer></script>
+    <script src="javascripts/map.js"></script>
+</body>
+</html>
