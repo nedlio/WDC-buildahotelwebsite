@@ -1,0 +1,424 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Search</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #navigation {
+            float: right;
+        }
+
+        input[type=text], input[type=password] {
+            width: 150px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+
+        .container {
+            padding: 16px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            border: 1px solid #888;
+            width: 500px;
+        }
+
+        .cancelbtn, .h {
+            padding: 16px;
+            display: inline-block;
+        }
+
+        .but {
+            padding: 16px;
+        }
+
+        }
+
+        #search {
+            padding: 5px;
+            width: 200px;
+            margin-left: 25px;
+            border: 1px solid darkgrey;
+            margin-bottom: 50px;
+            border-style: solid;
+            border-radius: 10px;
+        }
+
+        #filter {
+            padding: 5px;
+            width: 200px;
+            margin-left: 25px;
+            border: 1px solid darkgrey;
+            margin-bottom: 50px;
+            border-style: solid;
+            border-radius: 10px;
+        }
+
+        #hotelsyo {
+            float: right;
+            padding: 5px;
+            width: 350px;
+            margin-right: 50px;
+            border: 1px solid darkgrey;
+            margin-bottom: 50px;
+            border-style: solid;
+            border-radius: 10px;
+        }
+
+        #map {
+            float: right;
+            padding: 5px;
+            width: 300px;
+            margin-right: 25px;
+            border: 1px solid darkgrey;
+            margin-bottom: 50px;
+            border-style: solid;
+            border-radius: 10px;
+        }
+
+        #dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        #additionalButtons {
+            float: right;
+        }
+
+        #hoteltext {
+            text-align: right;
+        }
+
+        #finFormSelect {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <hr>
+    <p>
+
+        <div id="navigation">
+            <form class="h" method="get" action="index.html">
+                <button class="but" type="submit">HOME</button>
+            </form>
+
+            <button onclick="document.getElementById('sign').style.display='block'" style="width:auto;" class="h">SIGN-IN</button>
+            <div id="sign" class="modal">
+
+                <form class="modal-content">
+
+                    <div class="container">
+                        <h2>Sign in</h2>
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username" name="uname" required>
+                        <br>
+                        <label for="psw"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <br>
+                        <button type="submit" class="but">Login</button>
+
+                    </div>
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('sign').style.display='none'" class="cancelbtn">Cancel</button>
+
+                    </div>
+                </form>
+            </div>
+            <button onclick="document.getElementById('reg').style.display='block'" style="width:auto;" class="h">REGISTER</button>
+            <div id="reg" class="modal">
+
+                <form class="modal-content">
+
+                    <div class="container">
+                        <h2>Register</h2>
+                        <label for="name"><b>Full Name</b></label>
+                        <input type="text" placeholder="Name" name="name" required>
+                        <br>
+
+                        <label for="DOB"><b>DOB</b></label>
+                        <input type="text" placeholder="dd/mm/yy" name="DOB" required>
+                        <br>
+
+                        <label for="email"><b>Email</b></label>
+                        <input type="text" placeholder="john@example.com" name="email" required>
+                        <br>
+
+                        <label for="card"><b>Credit Card No.</b></label>
+                        <input type="text" placeholder="Card No." name="card" required>
+                        <br>
+
+                        <label for="uname"><b>Expiry</b></label>
+                        <input type="text" placeholder="mm/yy" name="exp" required>
+                        <br>
+
+                        <label for="sec"><b>Card Security No.</b></label>
+                        <input type="text" placeholder="CSC/CVV/CVC" name="sec" required>
+                        <br>
+
+                        <label for="uname"><b>Create Username</b></label>
+                        <input type="text" placeholder="Create Username" name="uname" required>
+                        <br>
+
+                        <label for="psw"><b>Create Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="psw" required>
+                        <br>
+
+                        <label for="repsw"><b>Re-Enter Password</b></label>
+                        <input type="password" placeholder="Re-Enter Password" name="repsw" required>
+                        <br>
+
+                        <button type="submit" class="but">Login</button>
+
+                    </div>
+                    <div class="container" style="background-color:#f1f1f1">
+                        <button type="button" onclick="document.getElementById('reg').style.display='none'" class="cancelbtn">Cancel</button>
+
+                    </div>
+                </form>
+            </div>
+            <form class="h" method="get" action="Accountmanagement.html">
+                <button class="but" type="submit">ACCOUNT MANAGEMENT</button>
+            </form>
+
+        </div>
+        <div id="search">
+            Search feature
+            <br>
+            <br>
+            <textarea rows="1" columns="40">City name here...</textarea>
+            <br>
+    <p>Arrival</p>
+    <form>
+        <select>
+            <option>Day</options>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+        </select>
+    </form>
+    <form>
+        <select>
+            <option>Month</options>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+    </form>
+    <p> Departure </p>
+    <form>
+        <select>
+            <option>Day</options>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+            <option>13</option>
+            <option>14</option>
+            <option>15</option>
+            <option>16</option>
+            <option>17</option>
+            <option>18</option>
+            <option>19</option>
+            <option>20</option>
+            <option>21</option>
+            <option>22</option>
+            <option>23</option>
+            <option>24</option>
+            <option>25</option>
+            <option>26</option>
+            <option>27</option>
+            <option>28</option>
+            <option>29</option>
+            <option>30</option>
+            <option>31</option>
+        </select>
+    </form>
+    <form>
+        <select>
+            <option>Month</options>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+        </select>
+    </form>
+    Rooms
+    <form>
+        <select>
+            <option>Rooms for... </options>
+            <option>1 Adult</option>
+            <option>2 Adult</option>
+            <option>2 Adult 1 Child</option>
+            <option>Family</option>
+            <option>Group</option>
+        </select>
+    </form>
+    <br>
+    <form class="h" method="get" action="Search.html">
+        <button class="but" type="submit">SEARCH</button>
+    </form>
+    <br>
+    <br>
+    </div>
+
+    <hr>
+    <div id="map">
+        Map to be placed
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+    </div>
+    <div id="hotelsyo">
+        Hotel
+        <br>
+        <br>
+        <p> Description Placeholder</p>
+        <br>
+        <br>
+        <br>
+        <br>
+        <p> Image Placeholder</p>
+        <br>
+        <p div id="hoteltext">Price:TBD</p>
+        <br>
+        <!--<form class="h" method="get" action="details.html">
+            <button class="but" div id="additionalButtons" type="submit">Choose Room</button>
+        </form>
+        <form class="h" method="get" action="details.html">
+            <button class="but" div id="btnViewMap" type="submit">View Map</button>
+        </form>-->
+        <input class="h" type="button" onclick="window.location.href = '/details.html'" value="Choose Room" />
+        <input class="h" type="button" onclick="window.location.href = '/details.html'" value="View Map" />
+        <br>
+    </div>
+    <div id="filter">
+        Filters
+        <br>
+        <p>Stars</p>
+        <form>
+            <input type="checkbox" name="star" value="1"> 1 Star<br>
+            <input type="checkbox" name="star" value="2"> 2 Star<br>
+            <input type="checkbox" name="star" value="3"> 3 Star<br>
+            <input type="checkbox" name="star" value="4"> 4 Star<br>
+            <input type="checkbox" name="star" value="5"> 5 Star<br>
+        </form>
+        <p>Customer Review</p>
+        <form>
+            <input type="checkbox" name="cReview" value="1"> 1<br>
+            <input type="checkbox" name="cReview" value="2"> 2<br>
+            <input type="checkbox" name="cReview" value="3"> 3<br>
+            <input type="checkbox" name="cReview" value="4"> 4<br>
+            <input type="checkbox" name="cReview" value="5"> 5<br>
+            <input type="checkbox" name="cReview" value="6"> 6<br>
+            <input type="checkbox" name="cReview" value="7"> 7<br>
+            <input type="checkbox" name="cReview" value="8"> 8<br>
+            <input type="checkbox" name="cReview" value="9"> 9<br>
+            <input type="checkbox" name="cReview" value="10"> 10<br>
+        </form>
+        <p>Price Range</p>
+        <input type="checkbox" name="price" value="1"> $0-$49<br>
+        <input type="checkbox" name="price" value="2"> $50-$99<br>
+        <input type="checkbox" name="price" value="3"> $100-$199<br>
+        <input type="checkbox" name="price" value="4"> $200-$299<br>
+        <input type="checkbox" name="price" value="5"> $300-$499<br>
+        <input type="checkbox" name="price" value="6"> $500-$999<br>
+        <input type="checkbox" name="price" value="7"> $1000-$1999<br>
+        <input type="checkbox" name="price" value="8"> $2000+<br>
+        <p>Amenities<p>
+            <input type="checkbox" name="amen" value="1"> Wifi<br>
+            <input type="checkbox" name="amen" value="2"> Parking<br>
+            <input type="checkbox" name="amen" value="3"> Swimming Pool<br>
+            <input type="checkbox" name="amen" value="4"> Air Conditioned<br>
+            <input type="checkbox" name="amen" value="5"> Resturant/Bar<br>
+            <input type="checkbox" name="amen" value="6"> Elevator<br>
+            <input type="checkbox" name="amen" value="7"> Business Centre<br>
+            <input type="checkbox" name="amen" value="8"> Self Laundry<br>
+            <input type="checkbox" name="amen" value="9"> Concierge<br>
+</body>
+</html>
