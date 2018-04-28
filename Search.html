@@ -4,117 +4,9 @@
     <title>Search</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="stylesheets/search.css" type="text/css" rel="stylesheet" />
     <style>
-        h1 {
-            text-align: center;
-        }
 
-        #navigation {
-            float: right;
-        }
-
-        input[type=text], input[type=password] {
-            width: 150px;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-
-
-        .container {
-            padding: 16px;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
-            padding-top: 60px;
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto 15% auto;
-            border: 1px solid #888;
-            width: 500px;
-        }
-
-        .cancelbtn, .h {
-            padding: 16px;
-            display: inline-block;
-        }
-
-        .but {
-            padding: 16px;
-        }
-
-        }
-
-        #search {
-            padding: 5px;
-            width: 200px;
-            margin-left: 25px;
-            border: 1px solid darkgrey;
-            margin-bottom: 50px;
-            border-style: solid;
-            border-radius: 10px;
-        }
-
-        #filter {
-            padding: 5px;
-            width: 200px;
-            margin-left: 25px;
-            border: 1px solid darkgrey;
-            margin-bottom: 50px;
-            border-style: solid;
-            border-radius: 10px;
-        }
-
-        #hotelsyo {
-            float: right;
-            padding: 5px;
-            width: 350px;
-            margin-right: 50px;
-            border: 1px solid darkgrey;
-            margin-bottom: 50px;
-            border-style: solid;
-            border-radius: 10px;
-        }
-
-        #map {
-            float: right;
-            padding: 5px;
-            width: 300px;
-            margin-right: 25px;
-            border: 1px solid darkgrey;
-            margin-bottom: 50px;
-            border-style: solid;
-            border-radius: 10px;
-        }
-
-        #dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        #additionalButtons {
-            float: right;
-        }
-
-        #hoteltext {
-            text-align: right;
-        }
-
-        #finFormSelect {
-            float: right;
-        }
     </style>
 </head>
 <body>
@@ -212,10 +104,12 @@
             <br>
             <textarea rows="1" columns="40">City name here...</textarea>
             <br>
+        </div>
+
     <p>Arrival</p>
     <form>
         <select>
-            <option>Day</options>
+            <option>Day</option>
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -251,7 +145,7 @@
     </form>
     <form>
         <select>
-            <option>Month</options>
+            <option>Month</option>
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -269,7 +163,7 @@
     <p> Departure </p>
     <form>
         <select>
-            <option>Day</options>
+            <option>Day</option>
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -305,7 +199,7 @@
     </form>
     <form>
         <select>
-            <option>Month</options>
+            <option>Month</option>
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -323,7 +217,7 @@
     Rooms
     <form>
         <select>
-            <option>Rooms for... </options>
+            <option>Rooms for... </option>
             <option>1 Adult</option>
             <option>2 Adult</option>
             <option>2 Adult 1 Child</option>
@@ -337,10 +231,10 @@
     </form>
     <br>
     <br>
-    </div>
+
 
     <hr>
-    <div id="map">
+    <!--<div id="map">
         Map to be placed
         <br>
         <br>
@@ -353,29 +247,19 @@
         <br>
         <br>
         <br>
-    </div>
-    <div id="hotelsyo">
-        Hotel
-        <br>
-        <br>
-        <p> Description Placeholder</p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p> Image Placeholder</p>
-        <br>
-        <p div id="hoteltext">Price:TBD</p>
-        <br>
-        <!--<form class="h" method="get" action="details.html">
-            <button class="but" div id="additionalButtons" type="submit">Choose Room</button>
-        </form>
-        <form class="h" method="get" action="details.html">
-            <button class="but" div id="btnViewMap" type="submit">View Map</button>
-        </form>-->
-        <input class="h" type="button" onclick="window.location.href = '/details.html'" value="Choose Room" />
-        <input class="h" type="button" onclick="window.location.href = '/details.html'" value="View Map" />
-        <br>
+    </div>-->
+    <div id="hotelsyo" class="searchResult">
+        <div id="divImg">
+            <img alt="Hotel image" height="200" width="200" src="images/hotel.jpg" />
+        </div>
+        <div id="divDesc">
+            <h2>Hotel Name</h2>
+            Located opposite Southern Cross Station in Melbourne CBD, the Great Southern Hotel Melbourne features a 24-hour reception and offers non-smoking rooms with air conditioning and private en suite...
+        </div>
+        <div id="divButtons">
+            <input class="btn" type="button" onclick="window.location.href = '/details.html'" value="View Detail" />
+            <input class="btn" type="button" onclick="window.location.href = '/map.html'" value="View Map" />
+        </div>
     </div>
     <div id="filter">
         Filters
@@ -420,5 +304,6 @@
             <input type="checkbox" name="amen" value="7"> Business Centre<br>
             <input type="checkbox" name="amen" value="8"> Self Laundry<br>
             <input type="checkbox" name="amen" value="9"> Concierge<br>
+    </div>
 </body>
 </html>
