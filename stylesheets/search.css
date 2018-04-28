@@ -1,0 +1,144 @@
+        h1 {
+            text-align: center;
+        }
+
+        #navigation {
+            float: right;
+        }
+
+        input[type=text], input[type=password] {
+            width: 150px;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+
+        .container {
+            padding: 16px;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.4);
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto 15% auto;
+            border: 1px solid #888;
+            width: 500px;
+        }
+
+        .cancelbtn, .h {
+            padding: 16px;
+            display: inline-block;
+        }
+
+	    .but{
+		    padding: 16px;
+	    }
+
+        #search {
+            padding: 5px;
+            width: 200px;
+            margin-left: 25px;
+            border: 1px solid darkgrey;
+            margin-bottom: 50px;
+            border-style: solid;
+            border-radius: 10px;
+        }
+
+        #filter {
+            padding: 5px;
+            /*width: 200px;*/
+            width:20%;
+            margin-left: 25px;
+            border: 1px solid darkgrey;
+            margin-bottom: 50px;
+            border-style: solid;
+            border-radius: 10px;
+        }
+
+        #hotelsyo {
+            float: right;
+            padding: 5px;
+            /*width: 350px;*/
+            width: 70%;
+            margin-right: 50px;
+            border: 1px solid darkgrey;
+            margin-bottom: 50px;
+            border-style: solid;
+            border-radius: 10px;
+        }
+
+        #map {
+            float: right;
+            padding: 5px;
+            width: 300px;
+            margin-right: 25px;
+            border: 1px solid darkgrey;
+            margin-bottom: 50px;
+            border-style: solid;
+            border-radius: 10px;
+        }
+
+        #divImg{
+            float:left;
+            width:20%
+        }
+
+        #divDesc{
+            float:left;
+            width: 50%
+        }
+        #divButtons{
+            float:right;
+            width: 10%;
+        }
+
+        .btn {
+            width:100px;
+            height:50px;
+            background-color: darkgoldenrod;
+            color: white;
+            padding: 14px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 5px;
+        }
+
+        .searchResult {
+            background-color: lightyellow;
+            border: 1px solid darkgrey;
+            padding: 20px;
+        }
+
+
+
+        #dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        #additionalButtons {
+            float: right;
+        }
+
+        #hoteltext {
+            text-align: right;
+        }
+
+        #finFormSelect {
+            float: right;
+        }
