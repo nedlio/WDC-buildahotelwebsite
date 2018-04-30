@@ -1,0 +1,82 @@
+		#review {
+			padding: 5px;
+			width:400px;
+			margin: auto;
+			border: 1px solid darkgrey;
+			background-color:#f1f1f1;
+			margin-bottom: 50px;
+			border-style: solid;
+			
+				}
+						#rev {
+			padding: 5px;
+			width:400px;
+			margin: auto;
+			border: 1px solid darkgrey;
+			background-color:#f1f1f1;
+			margin-bottom: 50px;
+			border-style: solid;
+			
+				}
+					#update {
+			padding: 5px;
+			width:400px;
+			margin: auto;
+			border: 1px solid darkgrey;
+			background-color:#f1f1f1;
+			margin-bottom: 50px;
+			border-style: solid;
+			
+				}
+					#change {
+			padding: 5px;
+			width:400px;
+			margin: auto;
+			border: 1px solid darkgrey;
+			background-color:#f1f1f1;
+			margin-bottom: 50px;
+			border-style: solid;
+			
+				}
+			h1, h2{
+				text-align: center;
+				}
+			.home{
+				float: right;
+				padding: 16px;
+			}	
+			.container 
+{
+    padding: 16px;
+}
+.but
+{
+	padding: 16px;
+}
+input[type=text], input[type=password] 
+{
+    width: 150px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+.search-item {
+    padding: 15px;
+}
+
+.search-value input {
+    width: 100%;
+    height: 30px;
+}
+
+.search-value select {
+    width: 100%;
+    height: 30px;
+}
+
+.book {
+    margin: auto;
+    
+}
