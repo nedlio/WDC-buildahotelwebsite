@@ -1,62 +1,97 @@
-        h1 {
-            text-align: center;
-        }
+body{
+	margin: 0;
+	
+	}
 
-        #navigation {
-            float: right;
-        }
+h1{
+	text-align: center;
+	}
+	#navigation{
+		float: right;
+	}
+	#search{
+			
+			width:200px;
+			height: 360px;
+			
+			margin-left: 25px;
+			margin-top: 25px;
+			
+			
+			border: 1px solid darkgrey;
+			border-style: solid;
+			background-color: lightyellow;
+			background-position: center;
+			background-size: 200px 360px;
+			float: left;		
+	}
+	
+select{
+	
+	width: 100%;
+	}
+	
 
-        input[type=text], input[type=password] {
-            width: 150px;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline-block;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
+input[type=text], input[type=password] 
+{
+    width: 150px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
 
 
-        .container {
-            padding: 16px;
-        }
+.container 
+{
+    padding: 16px;
+}
 
-        .modal {
-            display: none;
-            position: fixed;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.4);
-            padding-top: 60px;
-        }
+.modal 
+{
+    display: none; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.4); 
+    padding-top: 60px;
+}
 
-        .modal-content {
-            background-color: #fefefe;
-            margin: 5% auto 15% auto;
-            border: 1px solid #888;
-            width: 500px;
-        }
+	
 
-        .cancelbtn, .h {
-            padding: 16px;
-            display: inline-block;
-        }
+.modal-content 
+{
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid #888;
+    width: 500px; 
+}
+.cancelbtn, .h
+{
+	padding: 16px;
+	display: inline-block;
+}
+.but{
+padding: 16px;
+}
 
-	    .but{
-		    padding: 16px;
-	    }
 
-        #search {
-            padding: 5px;
-            width: 200px;
-            margin-left: 25px;
-            border: 1px solid darkgrey;
-            margin-bottom: 50px;
-            border-style: solid;
-            border-radius: 10px;
-        }
+
+#top{
+	background-image: url('/images/sky.jpg');
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	
+	width: 100%;
+	height: 400px;
+	
+	}
 
         #filter {
             padding: 5px;
@@ -66,7 +101,7 @@
             border: 1px solid darkgrey;
             margin-bottom: 50px;
             border-style: solid;
-            border-radius: 10px;
+            background-color: lightyellow;
         }
 
         #hotelsyo {
@@ -78,7 +113,7 @@
             border: 1px solid darkgrey;
             margin-bottom: 50px;
             border-style: solid;
-            border-radius: 10px;
+            
         }
 
         #map {
@@ -142,3 +177,8 @@
         #finFormSelect {
             float: right;
         }
+        
+        
+        body{
+	margin: 0;
+	}
